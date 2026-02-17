@@ -23,7 +23,7 @@ The Digital Halal Merchant Network helps:
 
 - 🛍️ Consumers find verified halal businesses
 - 🏪 Merchants create digital storefronts
-- 👑 Majlis verify and manage halal certifications
+- 👑 Admin verify and manage halal certifications
 
 This platform introduces **trust, transparency, and digital accessibility** into Ethiopia’s halal marketplace.
 
@@ -50,7 +50,7 @@ This platform introduces **trust, transparency, and digital accessibility** into
 - Upload halal certificates
 - Sales analytics dashboard
 
-### 👑 For Admin (Majlis)
+### 👑 For Admin 
 
 - Merchant verification system
 - Certificate approval & expiry tracking
