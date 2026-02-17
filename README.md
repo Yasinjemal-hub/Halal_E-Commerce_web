@@ -148,49 +148,50 @@ REACT_APP_API_URL=http://localhost:5000/api
 digital-halal-network/
 │
 ├── backend/
-│   ├── config/
-│   │   ├── db.js
-│   │   └── cloudinary.js
-│   │
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Cart.js
-│   │   ├── Merchant.js
-│   │   ├── Product.js
-│   │   ├── Order.js
-│   │   ├── Certificate.js
-│   │   └── Review.js
-│   │
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── userRoutes.js
-│   │   ├── cartRoutes.js
-│   │   ├── merchantRoutes.js
-│   │   ├── productRoutes.js
-│   │   ├── orderRoutes.js
-│   │   └── adminRoutes.js
-│   │
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── userController.js
-│   │   ├── cartController.js
-│   │   ├── merchantController.js
-│   │   ├── productController.js
-│   │   ├── orderController.js
-│   │   └── adminController.js
-│   │
-│   ├── middleware/
-│   │   ├── auth.js
-│   │   ├── roleCheck.js
-│   │   └── upload.js
-│   │   └── validate.js
-│   │   └── errorHandler.js
-│   │
-│   ├── utils/
-│   │   ├── sendEmail.js
-│   │   └── generateToken.js
-│   │   └── payment.js
-│   │   └── logger.js
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── db.js
+│   │   │   └── cloudinary.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Cart.js
+│   │   │   ├── Merchant.js
+│   │   │   ├── Product.js
+│   │   │   ├── Order.js
+│   │   │   ├── Certificate.js
+│   │   │   └── Review.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── userRoutes.js
+│   │   │   ├── cartRoutes.js
+│   │   │   ├── merchantRoutes.js
+│   │   │   ├── productRoutes.js
+│   │   │   ├── orderRoutes.js
+│   │   │   └── adminRoutes.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── userController.js
+│   │   │   ├── cartController.js
+│   │   │   ├── merchantController.js
+│   │   │   ├── productController.js
+│   │   │   ├── orderController.js
+│   │   │   └── adminController.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   ├── roleCheck.js
+│   │   │   ├── upload.js
+│   │   │   ├── validate.js
+│   │   │   └── errorHandler.js
+│   │   │
+│   │   └── utils/
+│   │       ├── sendEmail.js
+│   │       ├── generateToken.js
+│   │       ├── payment.js
+│   │       └── logger.js
 │   │
 │   ├── .env
 │   ├── package.json
@@ -237,7 +238,7 @@ digital-halal-network/
 │   │   ├── services/
 │   │   │   ├── api.js
 │   │   │   └── authService.js
-│   │   │
+│   │
 │   │   ├── App.js
 │   │   └── index.js
 │   │
