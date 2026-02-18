@@ -125,11 +125,11 @@ npm start
 ```
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/ecommerce_db
-JWT_SECRET=your_access_token_secret
-JWT_EXPIRE=15m
-JWT_REFRESH_SECRET=your_refresh_token_secret
+JWT_SECRET=access_token_secret_key
+JWT_EXPIRE=1h
+JWT_REFRESH_SECRET=refresh_token_secret_key
 JWT_REFRESH_EXPIRE=7d
-EMAIL_USER=your_email
+EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
 CLIENT_URL=http://localhost:3000
 ```
