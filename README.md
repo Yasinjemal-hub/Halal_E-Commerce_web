@@ -50,7 +50,7 @@ This platform introduces **trust, transparency, and digital accessibility** into
 - Upload halal certificates
 - Sales analytics dashboard
 
-### 👑 For Admin 
+### 👑 For Admin
 
 - Merchant verification system
 - Certificate approval & expiry tracking
@@ -124,7 +124,7 @@ npm start
 
 ```
 PORT=5000
-MONGODB_URI=your_mongodb_uri
+MONGODB_URI=mongodb://127.0.0.1:27017/ecommerce_db
 JWT_SECRET=your_access_token_secret
 JWT_EXPIRE=15m
 JWT_REFRESH_SECRET=your_refresh_token_secret
@@ -151,7 +151,6 @@ digital-halal-network/
 │   ├── src/
 │   │   ├── config/
 │   │   │   ├── db.js
-│   │   │   └── cloudinary.js
 │   │   │
 │   │   ├── models/
 │   │   │   ├── User.js
