@@ -10,6 +10,7 @@ import CartDrawer from './components/common/CartDrawer';
 // Pages
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Merchants from './pages/Merchants';
 import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
@@ -66,6 +67,7 @@ function App() {
         {/* Main Routes */}
         <Route path="/" element={<MainLayout><Home /></MainLayout>} />
         <Route path="/shop" element={<MainLayout><Shop /></MainLayout>} />
+        <Route path="/merchants" element={<MainLayout><Merchants /></MainLayout>} />
         <Route path="/product/:id" element={<MainLayout><ProductDetails /></MainLayout>} />
         <Route path="/cart" element={<MainLayout><Cart /></MainLayout>} />
         <Route path="/checkout" element={<MainLayout><Checkout /></MainLayout>} />

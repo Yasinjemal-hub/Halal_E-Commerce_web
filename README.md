@@ -23,7 +23,7 @@ The Digital Halal Merchant Network helps:
 
 - 🛍️ Consumers find verified halal businesses
 - 🏪 Merchants create digital storefronts
-- 👑 Majlis verify and manage halal certifications
+- 👑 Admin verify and manage halal certifications
 
 This platform introduces **trust, transparency, and digital accessibility** into Ethiopia’s halal marketplace.
 
@@ -50,7 +50,7 @@ This platform introduces **trust, transparency, and digital accessibility** into
 - Upload halal certificates
 - Sales analytics dashboard
 
-### 👑 For Admin (Majlis)
+### 👑 For Admin
 
 - Merchant verification system
 - Certificate approval & expiry tracking
@@ -124,10 +124,12 @@ npm start
 
 ```
 PORT=5000
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
-JWT_EXPIRE=7d
-EMAIL_USER=your_email
+MONGODB_URI=mongodb://127.0.0.1:27017/ecommerce_db
+JWT_SECRET=access_token_secret_key
+JWT_EXPIRE=1h
+JWT_REFRESH_SECRET=refresh_token_secret_key
+JWT_REFRESH_EXPIRE=7d
+EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
 CLIENT_URL=http://localhost:3000
 ```
@@ -146,41 +148,49 @@ REACT_APP_API_URL=http://localhost:5000/api
 digital-halal-network/
 │
 ├── backend/
-│   ├── config/
-│   │   ├── db.js
-│   │   └── cloudinary.js
-│   │
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Merchant.js
-│   │   ├── Product.js
-│   │   ├── Order.js
-│   │   ├── Certificate.js
-│   │   └── Review.js
-│   │
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── userRoutes.js
-│   │   ├── merchantRoutes.js
-│   │   ├── productRoutes.js
-│   │   ├── orderRoutes.js
-│   │   └── adminRoutes.js
-│   │
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── merchantController.js
-│   │   ├── productController.js
-│   │   ├── orderController.js
-│   │   └── adminController.js
-│   │
-│   ├── middleware/
-│   │   ├── auth.js
-│   │   ├── roleCheck.js
-│   │   └── upload.js
-│   │
-│   ├── utils/
-│   │   ├── sendEmail.js
-│   │   └── generateToken.js
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── db.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Cart.js
+│   │   │   ├── Merchant.js
+│   │   │   ├── Product.js
+│   │   │   ├── Order.js
+│   │   │   ├── Certificate.js
+│   │   │   └── Review.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── userRoutes.js
+│   │   │   ├── cartRoutes.js
+│   │   │   ├── merchantRoutes.js
+│   │   │   ├── productRoutes.js
+│   │   │   ├── orderRoutes.js
+│   │   │   └── adminRoutes.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── userController.js
+│   │   │   ├── cartController.js
+│   │   │   ├── merchantController.js
+│   │   │   ├── productController.js
+│   │   │   ├── orderController.js
+│   │   │   └── adminController.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   ├── roleCheck.js
+│   │   │   ├── upload.js
+│   │   │   ├── validate.js
+│   │   │   └── errorHandler.js
+│   │   │
+│   │   └── utils/
+│   │       ├── sendEmail.js
+│   │       ├── generateToken.js
+│   │       ├── payment.js
+│   │       └── logger.js
 │   │
 │   ├── .env
 │   ├── package.json
@@ -227,7 +237,7 @@ digital-halal-network/
 │   │   ├── services/
 │   │   │   ├── api.js
 │   │   │   └── authService.js
-│   │   │
+│   │
 │   │   ├── App.js
 │   │   └── index.js
 │   │

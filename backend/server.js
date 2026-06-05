@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import mongoose from 'mongoose';
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -63,10 +64,12 @@ app.use(errorHandler);
 // ── Start Server ────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 
+
 app.listen(PORT, () => {
     console.log(`\n🚀 Server running on port ${PORT}`);
     console.log(`📍 API Base: http://localhost:${PORT}/api`);
     console.log(`🏥 Health:    http://localhost:${PORT}/api/health\n`);
 });
 
+console.log("ENV URI:",process.env.MONGO_URI);
 export default app;
